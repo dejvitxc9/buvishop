@@ -1,5 +1,5 @@
-import "./Oferta.css";
-import But from "./But";
+import "./StroreOffer.css";
+import But from "../store-offer-item/StoreItem";
 
 function Oferta(props) {
   const obuwie = props.oferta;

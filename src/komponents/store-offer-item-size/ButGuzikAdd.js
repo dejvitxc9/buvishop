@@ -2,10 +2,7 @@ import "./ButGuzikAdd.css";
 import { useState } from "react";
 
 function ButGuzikAdd(props) {
-  const [isWyloczony, setWyloczony] = useState(true);
-
   function add() {
-    setWyloczony();
     props.onAddTreButDoKoszyka(props.zamowienie);
   }
 

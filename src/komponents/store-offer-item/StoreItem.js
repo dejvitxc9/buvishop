@@ -1,5 +1,5 @@
-import "./But.css";
-import ButGuzikAdd from "./ButGuzikAdd";
+import "./StoreItem.css";
+import ButGuzikAdd from "../store-offer-item-size/ButGuzikAdd";
 
 function But(props) {
   const listaRozmiarow = props.infoButa.size.map((rozm, index) => {
@@ -23,7 +23,7 @@ function But(props) {
       <div className="infoBut">
         <h1>{props.infoButa.model} </h1>
         <h5 className="modeltext">{props.infoButa.brand}</h5>
-        <h4>Materiał: {props.infoButa.material}</h4>
+        <h4>Materiał: {props.infoButa.fabric}</h4>
         <h5 className="rozmiar-holder">Rozmiar: {listaRozmiarow}</h5>
       </div>
       <div className="imgButa">

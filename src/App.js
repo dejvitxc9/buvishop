@@ -1,15 +1,15 @@
 import "./bootstrap.css";
 import "./App.css";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Oferta from "./komponents/wyswietlanie/Oferta";
-import Strona from "./komponents/Strona";
-import Glowna from "./komponents/glowna/Glowna";
-import Dodajbuta from "./komponents/dodawanie/Dodajbuta";
-import Logowanie from "./komponents/logowanie/Logowanie";
-import Kontakt from "./komponents/kontakt/Kontakt";
-import Koszyk from "./komponents/koszyk/Koszyk";
+import StoreOffer from "./components/store-offer/StroreOffer";
+import Layout from "./components/layout/Layout";
+import Main from "./components/main/Main";
+import LoginPage from "./components/login-page/LoginPage";
+import Contact from "./components/contact/Contact";
+import Cart from "./components/cart/Cart";
+import AddShoe from "./components/add-shoe/AddShoe";
 
 function App() {
   const accesCode = "1234";
@@ -20,7 +20,7 @@ function App() {
       brand: "Adidas",
       model: "Ultraboost 21",
       size: [40, 41, 43, 44, 45],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 349.99,
       quantity: 20,
     },
@@ -29,7 +29,7 @@ function App() {
       brand: "Nike",
       model: "Air Force 1",
       size: [39, 40, 41, 42, 46],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 449.99,
       quantity: 15,
     },
@@ -38,7 +38,7 @@ function App() {
       brand: "New Balance",
       model: "990v5",
       size: [40, 41, 42, 43, 44],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 259.99,
       quantity: 8,
     },
@@ -47,7 +47,7 @@ function App() {
       brand: "Reebok",
       model: "Classic Leather",
       size: [39, 41, 42, 43],
-      material: "skóra syntetyczna",
+      fabric: "skóra syntetyczna",
       price: 249.99,
       quantity: 13,
     },
@@ -56,7 +56,7 @@ function App() {
       brand: "Puma",
       model: "RS-X",
       size: [42, 43, 44, 45],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 349.99,
       quantity: 12,
     },
@@ -65,7 +65,7 @@ function App() {
       brand: "Adidas",
       model: "NMD_R1",
       size: [39, 40, 42, 43, 44],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 549.99,
       quantity: 18,
     },
@@ -74,7 +74,7 @@ function App() {
       brand: "Nike",
       model: "Air Max 270",
       size: [39, 41, 42, 43, 44],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 219.99,
       quantity: 10,
     },
@@ -83,7 +83,7 @@ function App() {
       brand: "New Balance",
       model: "327",
       size: [39, 40, 42, 43],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 349.99,
       quantity: 15,
     },
@@ -92,7 +92,7 @@ function App() {
       brand: "Reebok",
       model: "Club C 85",
       size: [39, 40, 42, 43],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 299.99,
       quantity: 20,
     },
@@ -101,7 +101,7 @@ function App() {
       brand: "Puma",
       model: "Cali",
       size: [41, 42, 43, 44],
-      material: "skóra syntetyczna",
+      fabric: "skóra syntetyczna",
       price: 329.99,
       quantity: 7,
     },
@@ -110,7 +110,7 @@ function App() {
       brand: "Adidas",
       model: "Superstar",
       size: [39, 41, 42, 43, 44],
-      material: "skóra syntetyczna",
+      fabric: "skóra syntetyczna",
       price: 299.99,
       quantity: 15,
     },
@@ -119,7 +119,7 @@ function App() {
       brand: "Nike",
       model: "Blazer Mid '77 Vintage",
       size: [39, 41, 42, 43],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 499.99,
       quantity: 8,
     },
@@ -128,7 +128,7 @@ function App() {
       brand: "New Balance",
       model: "991",
       size: [39, 40, 42, 43],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 919.99,
       quantity: 12,
     },
@@ -137,7 +137,7 @@ function App() {
       brand: "Reebok",
       model: "Aztrek",
       size: [41, 42, 43],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 249.99,
       quantity: 20,
     },
@@ -146,7 +146,7 @@ function App() {
       brand: "Puma",
       model: "Future Rider",
       size: [39, 40, 41, 43],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 299.99,
       quantity: 6,
     },
@@ -155,7 +155,7 @@ function App() {
       brand: "Adidas",
       model: "Stan Smith",
       size: [42, 43, 44, 45, 46],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 349.99,
       quantity: 18,
     },
@@ -164,7 +164,7 @@ function App() {
       brand: "Nike",
       model: "Air Max 97",
       size: [40, 41, 42, 43],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 549.99,
       quantity: 10,
     },
@@ -173,7 +173,7 @@ function App() {
       brand: "New Balance",
       model: "574",
       size: [40, 42, 43, 45, 46],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 399.99,
       quantity: 5,
     },
@@ -182,7 +182,7 @@ function App() {
       brand: "Reebok",
       model: "Instapump Fury",
       size: [40, 41, 42],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 499.99,
       quantity: 3,
     },
@@ -191,7 +191,7 @@ function App() {
       brand: "Puma",
       model: "Thunder Spectra",
       size: [40, 41, 42, 43],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 449.99,
       quantity: 7,
     },
@@ -200,64 +200,64 @@ function App() {
       brand: "Vans",
       model: "Authentic",
       size: [38, 39, 40, 41, 42],
-      material: "tkanina",
+      fabric: "tkanina",
       price: 79.99,
-      quantity: 20
-      },
-      {
+      quantity: 20,
+    },
+    {
       id: 21,
       brand: "Converse",
       model: "Chuck Taylor All Star",
       size: [36, 37, 38, 39, 40],
-      material: "tkanina",
+      fabric: "tkanina",
       price: 99.99,
-      quantity: 15
-      },
-      {
+      quantity: 15,
+    },
+    {
       id: 22,
       brand: "Puma",
       model: "Suede Classic",
       size: [38, 39, 40, 41, 42],
-      material: "zamsz",
+      fabric: "zamsz",
       price: 129.99,
-      quantity: 8
-      },
-      {
+      quantity: 8,
+    },
+    {
       id: 23,
       brand: "Adidas",
       model: "Superstar",
       size: [37, 38, 39, 40, 41],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 199.99,
-      quantity: 13
-      },
-      {
+      quantity: 13,
+    },
+    {
       id: 24,
       brand: "Reebok",
       model: "Club C 85",
       size: [36, 37, 38, 39, 40],
-      material: "skóra naturalna",
+      fabric: "skóra naturalna",
       price: 149.99,
-      quantity: 12
-      },
-      {
+      quantity: 12,
+    },
+    {
       id: 25,
       brand: "New Balance",
       model: "574",
       size: [38, 39, 40, 41, 42],
-      material: "tekstylia",
+      fabric: "tekstylia",
       price: 109.99,
-      quantity: 18
-      },
-      {
+      quantity: 18,
+    },
+    {
       id: 26,
       brand: "Nike",
       model: "Blazer Mid '77",
       size: [37, 38, 39, 40, 41],
-      material: "skóra syntetyczna",
+      fabric: "skóra syntetyczna",
       price: 169.99,
-      quantity: 10
-      }
+      quantity: 10,
+    },
   ];
   const usersStarter = [
     {
@@ -408,14 +408,14 @@ function App() {
   }
 
   function updateUsersList() {
-    if(currentUser!=null){
-      const propozycjaUsers = users.map((sprawdzanyUser)=>{
-        if(sprawdzanyUser.id != currentUser.id){
-          return(sprawdzanyUser);
-        }else{
-          return(currentUser);
+    if (currentUser != null) {
+      const propozycjaUsers = users.map((sprawdzanyUser) => {
+        if (sprawdzanyUser.id != currentUser.id) {
+          return sprawdzanyUser;
+        } else {
+          return currentUser;
         }
-      })
+      });
       console.log(propozycjaUsers);
       addUser(propozycjaUsers);
     }
@@ -442,30 +442,27 @@ function App() {
         item[2] === noweDane.ilosc
       );
     });
-  
+
     if (index !== -1) {
       currentUser.koszykZakupow[index][2] = noweDane.nowaIlosc;
-    }  
+    }
     updateStatus(currentUser);
   }
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Strona status={userStatus} akcja={akcja} />}>
+        <Route path="/" element={<Layout status={userStatus} akcja={akcja} />}>
           <Route
             index
             element={
-              <Glowna
-                length={bazaDanychButy.length}
-                lengthUSER={users.length}
-              />
+              <Main length={bazaDanychButy.length} lengthUSER={users.length} />
             }
           ></Route>
           <Route
             path="oferta"
             element={
-              <Oferta
+              <StoreOffer
                 oferta={bazaDanychButy}
                 onAddButDoKoszyka={updateCurrnetUserKoszyk}
               />
@@ -474,14 +471,14 @@ function App() {
           <Route
             path="dodawanie"
             element={
-              <Dodajbuta onButAdd={updateButy} length={bazaDanychButy.length} />
+              <AddShoe onAddShoe={updateButy} length={bazaDanychButy.length} />
             }
           ></Route>
-          <Route path="kontakt" element={<Kontakt />}></Route>
+          <Route path="kontakt" element={<Contact />}></Route>
           <Route
             path="koszyk"
             element={
-              <Koszyk
+              <Cart
                 user={currentUser}
                 buty={bazaDanychButy}
                 usuniecieProduktu={usuwanieProduktuZKoszyka}
@@ -492,7 +489,7 @@ function App() {
           <Route
             path="logowanie"
             element={
-              <Logowanie
+              <LoginPage
                 users={users}
                 onZaloguj={prosbaZalogowania}
                 bypas={wyloguj}
@@ -501,7 +498,7 @@ function App() {
               />
             }
           ></Route>
-          <Route path="*" element={<Oferta oferta={bazaDanychButy} />}></Route>
+          <Route path="*" element={<StoreOffer oferta={bazaDanychButy} />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

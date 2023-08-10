@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./Koszyk.css";
-import KoszykItem from "./KoszykItem";
+import "./Cart.css";
+import CartItem from "../cart-item/CartItem";
 
 function Koszyk(props) {
   const [koszyk, setKoszyk] = useState(props.user.koszykZakupow);
@@ -10,7 +10,7 @@ function Koszyk(props) {
       <p>Brak produktów w koszyku.</p>
     ) : (
       koszyk.map(([id, rozmiar, ilosc], index) => (
-        <KoszykItem
+        <CartItem
           infoButa={{ ...props.buty[id], rozmiar, ilosc }}
           onZmiana={props.edycjaProduktuWKoszyku}
           key={index}

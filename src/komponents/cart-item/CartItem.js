@@ -1,17 +1,17 @@
-import "./KoszykItem.css";
+import "./CartItem.css";
 import { useState } from "react";
 
 function KoszykItem(props) {
-  let id = props.infoButa.id;
-  let brand = props.infoButa.brand;
-  let model = props.infoButa.model;
-  let size = props.infoButa.size;
-  let material = props.infoButa.material;
-  let price = props.infoButa.price;
-  let maxButow = props.infoButa.quantity;
+  const id = props.infoButa.id;
+  const brand = props.infoButa.brand;
+  const model = props.infoButa.model;
+  const size = props.infoButa.size;
+  const fabric = props.infoButa.fabric;
+  const price = props.infoButa.price;
+  const maxButow = props.infoButa.quantity;
 
-  let wybranyRozmiar = props.infoButa.rozmiar;
-  let wybranaIlosc = props.infoButa.ilosc;
+  const wybranyRozmiar = props.infoButa.rozmiar;
+  const wybranaIlosc = props.infoButa.ilosc;
   let x;
 
   const kompaktoweDanePrzedmiotu = {
@@ -32,17 +32,13 @@ function KoszykItem(props) {
       return;
     }
 
-    let nowa = Math.round(price * x * 100) / 100;
+    const nowa = Math.round(price * x * 100) / 100;
 
     setCurrentPrice(nowa);
     update();
   }
 
   function update() {
-    // const zmiana = {
-    //   index: id,
-    //   nowaIlosc: x,
-    // };
     props.onZmiana({...kompaktoweDanePrzedmiotu, nowaIlosc: x});
   }
 
@@ -59,7 +55,7 @@ function KoszykItem(props) {
       </div>
       <div className="podzialka-l">
         <h4>Wybrany rozmiar: {wybranyRozmiar}</h4>
-        <h4>Materiał: {material}</h4>
+        <h4>Materiał: {fabric}</h4>
       </div>
       <div className="podzialka-l">
         <h3>

@@ -1,4 +1,4 @@
-import "./Logowanie.css";
+import "./LoginPage.css";
 import { useState } from "react";
 
 function Logowanie(props) {

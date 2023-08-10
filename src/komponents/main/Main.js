@@ -1,6 +1,6 @@
-import "./Glowna.css";
+import "./Main.css";
 
-function Glowna(props){
+function Main(props){
     let dlugosc = props.length;
 
     return(
@@ -12,4 +12,4 @@ function Glowna(props){
     );
 }
 
-export default Glowna;
+export default Main;

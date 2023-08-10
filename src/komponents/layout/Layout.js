@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import "./Strona.css";
+import "./Layout.css";
 
 function Strona(props) {
   let status = props.status;
