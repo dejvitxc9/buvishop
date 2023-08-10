@@ -1,16 +1,16 @@
 import './Contact.css';
-import Mapa from './GMap';
+import GMap from './GMap';
 
-function Kontakt() {
+function Contact() {
 
     return (
-        <div className='kontakt-container'>
+        <div className='contakt-container'>
             <h1>Kontakt</h1>
             <h3>Telefon: +48 793 070 996</h3>
             <h3>E-mail: dawid.uniowski@gmail.com</h3>
             <h4>Znajdź nas: </h4>
-            {<Mapa/>}
+            {<GMap/>}
         </div>
     );
 }
-export default Kontakt;
+export default Contact;

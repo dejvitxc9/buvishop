@@ -311,7 +311,7 @@ function App() {
   const [users, addUser] = useState(usersStarter);
   const [currentUser, setCurrentUser] = useState();
   const [bazaDanychButy, setBazaDanychButy] = useState(shoesData);
-  const [akcja, setAkcja] = useState("");
+  const [menu, setMenu] = useState("");
 
   function updateUsers(newUser) {
     addUser([...users, newUser]);
@@ -346,7 +346,6 @@ function App() {
           setCurrentUser(users.at(i));
           updateStatus(
             users[i]
-            // users[i].ranga + ": " + users[i].firstName + " " + users[i].lastName
           );
         } else {
           alert("Złe hasło lub login");
@@ -370,7 +369,7 @@ function App() {
     setUserStatus(status);
 
     if (currentUser.ranga == "Administrator") {
-      setAkcja(
+      setMenu(
         <Link to={"/dodawanie"}>
           <div className="guzikMenu">
             <p>Dodawanie do oferty</p>
@@ -378,24 +377,23 @@ function App() {
         </Link>
       );
     } else if (currentUser.ranga == "Klient") {
-      // console.log(currentLiczbaItemow+" : "+currentUserID)
-      setAkcja(
+      setMenu(
         <>
           <Link to={"/kontakt"}>
-            <div className="guzikMenu">
+            <div className="menuButton">
               <p>Kontakt</p>
             </div>
           </Link>
           <Link to={"/koszyk"}>
-            <div className="guzikMenu">
+            <div className="menuButton">
               <p>Koszyk: {currentUser.koszykZakupow.length}</p>
             </div>
           </Link>
         </>
       );
     } else {
-      setUserStatus("s");
-      setAkcja(<></>);
+      setUserStatus("Błąd");
+      setMenu(<></>);
     }
     updateUsersList();
   }
@@ -404,7 +402,7 @@ function App() {
     updateUsersList();
     setCurrentUser();
     setUserStatus("");
-    setAkcja(<></>);
+    setMenu(<></>);
   }
 
   function updateUsersList() {
@@ -452,7 +450,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout status={userStatus} akcja={akcja} />}>
+        <Route path="/" element={<Layout status={userStatus} menu={menu} />}>
           <Route
             index
             element={
@@ -460,7 +458,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="oferta"
+            path="sklep"
             element={
               <StoreOffer
                 oferta={bazaDanychButy}

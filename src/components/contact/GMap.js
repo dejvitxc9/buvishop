@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Mapa = () => (
+const GMap = () => (
   <div style={{ width: '700px', position: 'relative' }}>
     <iframe
       title="google-map"
@@ -48,4 +48,4 @@ const Mapa = () => (
   </div>
 );
 
-export default Mapa;
+export default GMap;

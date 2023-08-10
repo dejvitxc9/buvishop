@@ -54,8 +54,8 @@ function Logowanie(props) {
   function zarejestruj(event) {
     event.preventDefault();
 
-    let nowyLogin = document.rejestracja.relogin.value;
-    let noweHaslo = document.rejestracja.repass.value;
+    let nowyLogin = document.rejestracja.login.value;
+    let noweHaslo = document.rejestracja.pass.value;
     let nowaRanga = document.rejestracja.selectranga.value;
     let noweImie = document.rejestracja.imie.value;
     let noweNaziwsko = document.rejestracja.nazwisko.value;
@@ -90,8 +90,8 @@ function Logowanie(props) {
         koszykZakupow: [],
       };
 
-      document.rejestracja.relogin.value = "";
-      document.rejestracja.repass.value = "";
+      document.rejestracja.login.value = "";
+      document.rejestracja.pass.value = "";
       document.rejestracja.selectranga.value = "Klient";
       document.rejestracja.imie.value = "";
       document.rejestracja.nazwisko.value = "";
@@ -141,8 +141,8 @@ function Logowanie(props) {
             <label htmlFor="login">Login</label>
             <input
               type="text"
-              name="relogin"
-              id="relogin"
+              name="login"
+              id="login"
               className="form-control"
               placeholder="adres@email.com"
               required
@@ -151,8 +151,8 @@ function Logowanie(props) {
             <label htmlFor="pass">Hasło</label>
             <input
               type="password"
-              name="repass"
-              id="repass"
+              name="pass"
+              id="pass"
               className="form-control"
               placeholder="********"
               required

@@ -27,7 +27,7 @@ main {
   overflow: auto;
 }
 
-.guzikMenu {
+.menuButton {
   background: linear-gradient(45deg, #00c1f1, #7ac500);
   float: right;
   padding-left: 2rem;
@@ -40,7 +40,7 @@ main {
   margin-left: 3rem;
 }
 
-.rankUser {
+.userStatus {
   background: linear-gradient(45deg, #5c00f1, #00c5bb);
   float: right;
   padding-left: 2rem;
@@ -54,18 +54,18 @@ main {
   margin-right: 3rem;
 }
 
-.guzikMenu > p,
-.rankUser > span {
+.menuButton > p,
+.userStatus > span {
   color: #fff;
   font-weight: bold;
 }
 
-.rankUser > img {
+.userStatus > img {
   width: 3rem;
   height: auto;
 }
 
-.guzikMenu:hover,
-.rankUser:hover {
+.menuButton:hover,
+.userStatus:hover {
   scale: 1.05;
 }
