@@ -433,18 +433,18 @@ function App() {
     updateStatus(currentUser);
   }
 
-  function edycjaProduktuWKoszyku(noweDane) {
-    console.log(noweDane);
+  function edycjaProduktuWKoszyku(newCartItemData) {
+    console.log(newCartItemData);
     const index = currentUser.koszykZakupow.findIndex((item) => {
       return (
-        item[0] === noweDane.id &&
-        item[1] === noweDane.rozmiar &&
-        item[2] === noweDane.ilosc
+        item[0] === newCartItemData.id &&
+        item[1] === newCartItemData.selectedSize &&
+        item[2] === newCartItemData.selectedQuantity
       );
     });
 
     if (index !== -1) {
-      currentUser.koszykZakupow[index][2] = noweDane.nowaIlosc;
+      currentUser.koszykZakupow[index][2] = newCartItemData.newSelectedQuantity;
     }
     updateStatus(currentUser);
   }

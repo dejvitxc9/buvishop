@@ -2,59 +2,51 @@ import "./CartItem.css";
 import { useState } from "react";
 
 function KoszykItem(props) {
-  const id = props.infoButa.id;
-  const brand = props.infoButa.brand;
-  const model = props.infoButa.model;
-  const size = props.infoButa.size;
-  const fabric = props.infoButa.fabric;
-  const price = props.infoButa.price;
-  const maxButow = props.infoButa.quantity;
+  const id = props.shoeData.id;
+  const brand = props.shoeData.brand;
+  const model = props.shoeData.model;
+  const fabric = props.shoeData.fabric;
+  const price = props.shoeData.price;
 
-  const wybranyRozmiar = props.infoButa.rozmiar;
-  const wybranaIlosc = props.infoButa.ilosc;
+  const selectedSize = props.shoeData.selectedSize;
+  const selectedQuantity = props.shoeData.selectedQuantity;
   let x;
 
   const kompaktoweDanePrzedmiotu = {
     id: id,
-    rozmiar: wybranyRozmiar,
-    ilosc: wybranaIlosc,
+    selectedSize: selectedSize,
+    selectedQuantity: selectedQuantity,
   };
 
   const imgsrc = "/images/img (" + id + ").png";
-  const idinputa = "iloscZamowienia" + id;
+  const quantityInputID = "quantityInput" + id;
 
-  const [currentPrice, setCurrentPrice] = useState(wybranaIlosc * price);
+  const [currentPrice, setCurrentPrice] = useState(selectedQuantity * price);
 
-  function edycja() {
-    x = parseFloat(document.getElementById(idinputa).value);
-    if (isNaN(x)) {
-      console.log("Wartość x musi być liczbą!");
-      return;
-    }
-
+  function changeShoeData() {
+    x = document.getElementById(quantityInputID).value;
     const nowa = Math.round(price * x * 100) / 100;
-
     setCurrentPrice(nowa);
     update();
   }
 
   function update() {
-    props.onZmiana({...kompaktoweDanePrzedmiotu, nowaIlosc: x});
+    props.onChange({...kompaktoweDanePrzedmiotu, newSelectedQuantity: x});
   }
 
-  function usuwanieProduktu() {
-    props.onUsun(kompaktoweDanePrzedmiotu);
+  function deleteShoe() {
+    props.onDelete(kompaktoweDanePrzedmiotu);
   }
 
   return (
-    <div className="item" key={id.toString()}>
+    <div className="item" key={id}>
       <img src={imgsrc} alt={brand}></img>
       <div className="podzialka-m">
         <h1>{model}</h1>
         <h3>{brand}</h3>
       </div>
       <div className="podzialka-l">
-        <h4>Wybrany rozmiar: {wybranyRozmiar}</h4>
+        <h4>Wybrany selectedSize: {selectedSize}</h4>
         <h4>Materiał: {fabric}</h4>
       </div>
       <div className="podzialka-l">
@@ -63,19 +55,19 @@ function KoszykItem(props) {
           <div className="iloscZamowienia-container">
             <input
               type="number"
-              onChange={edycja}
+              onChange={changeShoeData}
               className="form-control"
-              id={idinputa}
-              defaultValue={wybranaIlosc}
+              id={quantityInputID}
+              defaultValue={selectedQuantity}
               min={1}
-              max={props.infoButa.quantity}
+              max={props.shoeData.quantity}
             ></input>
           </div>
           <img
             className="usuwacz"
             src="/images/delete.png"
             alt="Usuń produkt"
-            onClick={usuwanieProduktu}
+            onClick={deleteShoe}
           />
         </h3>
         <h3 className="price">{Math.round((currentPrice) * 100) / 100}</h3>

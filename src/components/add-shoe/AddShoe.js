@@ -6,12 +6,7 @@ function AddShoe(props) {
   function addNewShoe(event) {
     event.preventDefault();
 
-    const brand = document.shoeAddForm.brand.value;
-    const model = document.shoeAddForm.model.value;
-    const fabric = document.shoeAddForm.fabric.value;
-    const price = document.shoeAddForm.price.value;
     const sizesForm = document.shoeAddForm.rozmiar;
-
     const availableSize = [];
     sizesForm.forEach((sizeIsChecked) => {
       if (sizeIsChecked.checked) {
@@ -21,15 +16,17 @@ function AddShoe(props) {
 
     const newShoe = {
       id: shoeID,
-      brand: brand,
-      model: model,
+      brand: document.shoeAddForm.brand.value,
+      model: document.shoeAddForm.model.value,
       size: availableSize,
-      fabric: fabric,
-      price: price,
+      fabric: document.shoeAddForm.fabric.value,
+      price: document.shoeAddForm.price.value,
       quantity: 10,
     };
 
     props.onAddShoe(newShoe);
+
+
     document.shoeAddForm.brand.value = "";
     document.shoeAddForm.model.value = "";
     document.shoeAddForm.fabric.value = "";
