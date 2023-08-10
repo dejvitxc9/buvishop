@@ -1,0 +1,85 @@
+.logowaniePage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logowanienastrone {
+  height: 45rem;
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.opcjeLogowania {
+  height: 40rem;
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.opcjeLogowania > h1 {
+  margin-bottom: 2rem;
+}
+
+.opcjeLogowania > section {
+  text-align: center;
+  background-color: #3d3d3d;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
+  height: 3rem;
+  line-height: 3rem;
+  cursor: pointer;
+}
+
+.opcjeLogowania > section:hover,
+.wyloguj > section:hover {
+  background-color: #3d3d3d;
+  scale: 1.05;
+}
+
+.wyloguj {
+  width: 10rem;
+  height: 7rem;
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.wyloguj > section {
+  text-align: center;
+  background-color: #3d3d3d;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
+  height: 3rem;
+  line-height: 3rem;
+  cursor: pointer;
+}
+
+.logowanienastrone form {
+  margin-bottom: 5rem;
+}
+
+.partLog {
+  width: 50%;
+  float: left;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+input[type="password"],
+input[type="text"] {
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  margin-top: 2rem;
+  margin-right: 3rem;
+  float: right;
+}

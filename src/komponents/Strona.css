@@ -1,0 +1,71 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  color: #f4f4f6;
+  background-color: #2d2d2d;
+}
+
+header {
+  text-align: left;
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(150deg, #00c5bb, #2e2e2e 24%, #2d2d2d);
+}
+
+header > h1 {
+  float: left;
+  margin-left: 3rem;
+  padding-top: 1rem;
+  font-size: 3rem;
+  width: 25rem;
+}
+
+main {
+  margin: auto;
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+}
+
+.guzikMenu {
+  background: linear-gradient(45deg, #00c1f1, #7ac500);
+  float: right;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+.rankUser {
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  float: right;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.guzikMenu > p,
+.rankUser > span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.rankUser > img {
+  width: 3rem;
+  height: auto;
+}
+
+.guzikMenu:hover,
+.rankUser:hover {
+  scale: 1.05;
+}

@@ -1,0 +1,35 @@
+.ofertaButa {
+  padding: 20px;
+  margin: 20px;
+  background: linear-gradient(-45deg, #5c00f1, #00c5bb);
+  padding: 2rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ofertaButa:hover {
+  scale: 1.05;
+}
+img{
+  border-radius: 10px;
+}
+.ofertaButa > img {
+  height: auto;
+  margin-top: 10px;
+}
+img:hover {
+  scale: 1.2;
+}
+.price {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #f4f4f6;
+}
+.price::after {
+  content: " PLN";
+}
+.modeltext {
+  font-size: 2rem;
+}

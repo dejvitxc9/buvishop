@@ -1,0 +1,36 @@
+.dodaj-container {
+  width: 50rem;
+  height: 40rem;
+  background: linear-gradient(60deg, #9900f1, #c57600);
+  box-shadow: 5px 5px #57008a;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 3rem;
+  float: left;
+}
+
+.nazwa {
+  width: 22rem;
+  float: left;
+}
+
+.nazwa:nth-child(2) {
+  margin-left: 2rem;
+}
+
+input[type="submit"] {
+  margin-top: 2rem;
+  margin-right: 3rem;
+  float: right;
+}
+
+input[type="text"],
+input[type="number"] {
+  margin-bottom: 1rem;
+}
+
+.jedenZWielu {
+  display: inline;
+  margin-left: 2rem;
+  font-size: large;
+}

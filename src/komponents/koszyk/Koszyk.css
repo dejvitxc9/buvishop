@@ -1,0 +1,28 @@
+.koszyk-container{
+    width: 70rem;
+    height: auto;
+    background: linear-gradient(60deg, #9900f1, #c57600);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    float: left;
+}
+
+.podsumowanie-container{
+    width: 30rem;
+    height: 40rem;
+    background: linear-gradient(-60deg, #9900f1, #c57600);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    float: left;
+}
+
+.podsumowanie-container>button{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.wozek>p{
+    text-align: right;
+}
