@@ -1,6 +1,5 @@
 .logowaniePage {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
 }
 
 .logowanienastrone {
@@ -82,4 +81,11 @@ input[type="text"] {
   margin-top: 2rem;
   margin-right: 3rem;
   float: right;
+}
+
+@media (max-width: 1000px) {
+  .logowaniePage {
+    display: flex;
+    flex-direction: column;
+  }
 }

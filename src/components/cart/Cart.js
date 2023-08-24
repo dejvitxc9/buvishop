@@ -19,7 +19,8 @@ function Cart(props) {
       ))
     );
   const podsumowanie = props.user.koszykZakupow.reduce(
-    (acc, [id, selectedSize, selectedQuantity]) => acc + selectedQuantity * props.buty[id].price,
+    (acc, [id, selectedSize, selectedQuantity]) =>
+      acc + selectedQuantity * props.buty[id].price,
     0
   );
 
@@ -45,7 +46,7 @@ function Cart(props) {
   }
 
   return (
-    <>
+    <div className="cart-container">
       <div className="koszyk-container">{userItems}</div>
       <div className="podsumowanie-container">
         <h1> Podsumowanie:</h1>
@@ -95,7 +96,7 @@ function Cart(props) {
           Rozłóż na raty
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

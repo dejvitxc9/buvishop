@@ -344,9 +344,7 @@ function App() {
       if (users[i].login == prLogin) {
         if (users[i].password == prPass) {
           setCurrentUser(users.at(i));
-          updateStatus(
-            users[i]
-          );
+          updateStatus(users[i]);
         } else {
           alert("Złe hasło lub login");
           setCurrentUser();
@@ -379,14 +377,14 @@ function App() {
     } else if (currentUser.ranga == "Klient") {
       setMenu(
         <>
-          <Link to={"/kontakt"}>
-            <div className="menuButton">
-              <p>Kontakt</p>
-            </div>
-          </Link>
-          <Link to={"/koszyk"}>
+          <Link to={"/koszyk"}  className="link">
             <div className="menuButton">
               <p>Koszyk: {currentUser.koszykZakupow.length}</p>
+            </div>
+          </Link>
+          <Link to={"/kontakt"} className="link">
+            <div className="menuButton">
+              <p>Kontakt</p>
             </div>
           </Link>
         </>
@@ -496,7 +494,10 @@ function App() {
               />
             }
           ></Route>
-          <Route path="*" element={<StoreOffer oferta={bazaDanychButy} />}></Route>
+          <Route
+            path="*"
+            element={<StoreOffer oferta={bazaDanychButy} />}
+          ></Route>
         </Route>
       </Routes>
     </BrowserRouter>

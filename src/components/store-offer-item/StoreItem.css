@@ -8,7 +8,6 @@
   flex-direction: row;
   align-items: center;
 }
-
 .ofertaButa:hover {
   scale: 1.05;
 }
@@ -25,6 +24,7 @@ img:hover {
 .price {
   font-size: 18px;
   margin-top: 10px;
+  margin-left: 20px;
   color: #f4f4f6;
 }
 .price::after {
