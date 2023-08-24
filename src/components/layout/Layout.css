@@ -33,9 +33,10 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   align-content: center;
+  gap: 2rem;
 }
 
 .menuButton {
@@ -59,7 +60,6 @@ nav {
   text-align: center;
   border-radius: 2rem;
   margin-top: 1rem;
-  margin-left: 3rem;
 }
 
 .menuButton > p,
@@ -78,7 +78,6 @@ nav {
   scale: 1.05;
 }
 
-
-.link{
+.link {
   text-decoration: none;
 }
