@@ -312,6 +312,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState();
   const [bazaDanychButy, setBazaDanychButy] = useState(shoesData);
   const [menu, setMenu] = useState("");
+  const [welcomeText, setWelcomeText] = useState("");
 
   function updateUsers(newUser) {
     addUser([...users, newUser]);
@@ -344,6 +345,7 @@ function App() {
       if (users[i].login == prLogin) {
         if (users[i].password == prPass) {
           setCurrentUser(users.at(i));
+          setWelcomeText("Witaj "+ users[i].firstName + " " + users[i].lastName);
           updateStatus(users[i]);
         } else {
           alert("Złe hasło lub login");
@@ -491,6 +493,7 @@ function App() {
                 bypas={wyloguj}
                 accesCode={accesCode}
                 onUserAdd={updateUsers}
+                showWelocomeScreen={welcomeText}
               />
             }
           ></Route>

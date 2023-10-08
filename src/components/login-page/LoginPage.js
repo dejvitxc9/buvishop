@@ -1,5 +1,5 @@
 import "./LoginPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Logowanie(props) {
   const accesCode = props.accesCode;
@@ -101,8 +101,40 @@ function Logowanie(props) {
     }
   }
 
+  const [welcomeEditedDiv, setWelcomeEditedDiv] = useState("");
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    if (props.showWelocomeScreen !== "") {
+      setWelcomeEditedDiv(<></>);
+      setAnimationKey(animationKey + 1);
+
+      const letters = Array.from(props.showWelocomeScreen);
+
+      if (animationKey>0) {
+        setWelcomeEditedDiv(
+          <div id="welcomeDiv" key={animationKey}>
+            <h1 className="h1Welcome">
+              {letters.map((letter, index) => (
+                <span className="spanWelcome" key={index}>
+                  {letter}
+                </span>
+              ))}
+            </h1>
+          </div>
+        );
+      }
+    }
+  }, [props.showWelocomeScreen]);
+
+  function rere() {
+    let test = document.getAnimations();
+    alert("d");
+  }
+
   return (
     <div className="logowaniePage">
+      {welcomeEditedDiv}
       <div className="logowanienastrone">
         <h1>Zaloguj się do konta</h1>
         <form id="logowanie" name="logowanie" onSubmit={zaloguj}>
