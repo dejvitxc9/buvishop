@@ -402,6 +402,7 @@ function App() {
     updateUsersList();
     setCurrentUser();
     setUserStatus("");
+    setWelcomeText("");
     setMenu(<></>);
   }
 
@@ -494,6 +495,7 @@ function App() {
                 accesCode={accesCode}
                 onUserAdd={updateUsers}
                 showWelocomeScreen={welcomeText}
+                test={setWelcomeText}
               />
             }
           ></Route>

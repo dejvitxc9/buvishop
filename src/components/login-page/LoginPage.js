@@ -111,7 +111,9 @@ function Logowanie(props) {
 
       const letters = Array.from(props.showWelocomeScreen);
 
-      if (animationKey>0) {
+      props.test("");
+
+      if (true) {
         setWelcomeEditedDiv(
           <div id="welcomeDiv" key={animationKey}>
             <h1 className="h1Welcome">
@@ -126,11 +128,6 @@ function Logowanie(props) {
       }
     }
   }, [props.showWelocomeScreen]);
-
-  function rere() {
-    let test = document.getAnimations();
-    alert("d");
-  }
 
   return (
     <div className="logowaniePage">
