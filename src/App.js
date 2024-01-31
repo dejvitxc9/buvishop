@@ -370,7 +370,7 @@ function App() {
 
     if (currentUser.ranga == "Administrator") {
       setMenu(
-        <Link to={"/dodawanie"}>
+        <Link to={"/dodawanie"}  className="link">
           <div className="guzikMenu">
             <p>Dodawanie do oferty</p>
           </div>

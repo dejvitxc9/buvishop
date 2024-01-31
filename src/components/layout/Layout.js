@@ -20,7 +20,7 @@ function Strona(props) {
           {props.menu}
           <Link to={"/logowanie"} className="link">
             <div className="userStatus">
-              <span>{props.status}</span>
+              <span className="userStatusSpan">{props.status}</span>
               <img src="/images/konto.png" alt="konto"></img>
             </div>
           </Link>
