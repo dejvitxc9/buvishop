@@ -1,31 +1,52 @@
 import { Link, Outlet } from "react-router-dom";
 import "./Layout.css";
+import { useState } from "react";
+import { FaTimes, FaBars } from "react-icons/fa";
 
 function Strona(props) {
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    setClick(!click);
+  };
+  const closeMenu = () => {
+    setClick(false);
+  };
+
   return (
     <div className="App">
-      <header>
-        <h1>Buvi</h1>
-        <nav>
-          <Link to={"/"} className="link"> 
-            <div className="menuButton">
+      <nav className="navigationbar">
+        <h1>BUVISRUVI</h1>
+
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (
+            <FaTimes size={30} className="primary-font-color" />
+          ) : (
+            <FaBars size={30} className="primary-font-color" />
+          )}
+        </div>
+
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to={"/"} onClick={closeMenu} className="primary-font-color">
               <p>Strona główna</p>
-            </div>
-          </Link>
-          <Link to={"/sklep"} className="link">
-            <div className="menuButton">
-              <p>Sklep</p>
-            </div>
-          </Link>
+            </Link>
+          </li>
+          <li >
+            <Link to={"/sklep"} onClick={closeMenu}>
+              <p className="nav-item">Sklep</p>
+            </Link>
+          </li>
           {props.menu}
-          <Link to={"/logowanie"} className="link">
-            <div className="userStatus">
-              <span className="userStatusSpan">{props.status}</span>
-              <img src="/images/konto.png" alt="konto"></img>
-            </div>
-          </Link>
-        </nav>
-      </header>
+          <li className="nav-item-user">
+            <Link to={"/logowanie"} onClick={closeMenu}>
+              <div className="userStatus">
+                <span className="userStatusSpan">{props.status}</span>
+                <img src="/images/konto.png" alt="konto" />
+              </div>
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <main>
         <Outlet />
       </main>

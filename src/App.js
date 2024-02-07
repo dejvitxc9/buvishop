@@ -345,7 +345,9 @@ function App() {
       if (users[i].login == prLogin) {
         if (users[i].password == prPass) {
           setCurrentUser(users.at(i));
-          setWelcomeText("Witaj "+ users[i].firstName + " " + users[i].lastName);
+          setWelcomeText(
+            "Witaj " + users[i].firstName + " " + users[i].lastName
+          );
           updateStatus(users[i]);
         } else {
           alert("Złe hasło lub login");
@@ -370,25 +372,25 @@ function App() {
 
     if (currentUser.ranga == "Administrator") {
       setMenu(
-        <Link to={"/dodawanie"}  className="link">
-          <div className="guzikMenu">
+        <li className="nav-item">
+          <Link to={"/dodawanie"}>
             <p>Dodawanie do oferty</p>
-          </div>
-        </Link>
+          </Link>
+        </li>
       );
     } else if (currentUser.ranga == "Klient") {
       setMenu(
         <>
-          <Link to={"/koszyk"}  className="link">
-            <div className="menuButton">
+          <li className="nav-item">
+            <Link to={"/koszyk"}>
               <p>Koszyk: {currentUser.koszykZakupow.length}</p>
-            </div>
-          </Link>
-          <Link to={"/kontakt"} className="link">
-            <div className="menuButton">
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/kontakt"}>
               <p>Kontakt</p>
-            </div>
-          </Link>
+            </Link>
+          </li>
         </>
       );
     } else {

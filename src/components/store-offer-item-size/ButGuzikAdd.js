@@ -1,5 +1,4 @@
 import "./ButGuzikAdd.css";
-import { useState } from "react";
 
 function ButGuzikAdd(props) {
   function add() {
