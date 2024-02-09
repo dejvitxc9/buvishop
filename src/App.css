@@ -3,10 +3,10 @@
   padding: 0px;
   transition: 0.3s ease-in-out;
 }
-* {
+/* * {
   scrollbar-width: auto;
   scrollbar-color: #01c1b7 #2d2d2d;
-}
+} */
 
 *::-webkit-scrollbar {
   width: 16px;
@@ -21,6 +21,7 @@
   border-radius: 10px;
   border: 3px solid #2d2d2d;
 }
+
 :root {
   background-color: #2d2d2d;
 }

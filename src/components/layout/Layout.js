@@ -15,7 +15,7 @@ function Strona(props) {
   return (
     <div className="App">
       <nav className="navigationbar">
-        <h1>BUVISRUVI</h1>
+        <h1>BUVI</h1>
 
         <div className="hamburger" onClick={handleClick}>
           {click ? (
