@@ -14,6 +14,6 @@ function Oferta(props) {
     );
   });
 
-  return <div className="ofertaobuwia">{ofertaObuwia}</div>;
+  return <div className="ofertaobuwia row">{ofertaObuwia}</div>;
 }
 export default Oferta;
