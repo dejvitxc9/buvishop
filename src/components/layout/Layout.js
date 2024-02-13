@@ -17,23 +17,23 @@ function Strona({ status, currentUser }) {
     if (currentUser != null) {
       if (currentUser.ranga == "Administrator") {
         setMenu(
-          <li className="nav-item">
+          <li>
             <Link to={"/dodawanie"} onClick={closeMenu}>
-              <p>Dodawanie do oferty</p>
+              <p className="nav-item">Dodawanie do oferty</p>
             </Link>
           </li>
         );
       } else if (currentUser.ranga == "Klient") {
         setMenu(
           <>
-            <li className="nav-item">
+            <li>
               <Link to={"/koszyk"} onClick={closeMenu}>
-                <p>Koszyk: {currentUser.koszykZakupow.length}</p>
+                <p className="nav-item">Koszyk: {currentUser.koszykZakupow.length}</p>
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link to={"/kontakt"} onClick={closeMenu}>
-                <p>Kontakt</p>
+                <p className="nav-item">Kontakt</p>
               </Link>
             </li>
           </>
@@ -57,9 +57,9 @@ function Strona({ status, currentUser }) {
         </div>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to={"/"} onClick={closeMenu} className="primary-font-color">
-              <p>Strona główna</p>
+          <li>
+            <Link to={"/"} onClick={closeMenu}>
+              <p className="nav-item">Strona główna</p>
             </Link>
           </li>
           <li>
@@ -68,9 +68,9 @@ function Strona({ status, currentUser }) {
             </Link>
           </li>
           {menu}
-          <li className="nav-item-user">
+          <li>
             <Link to={"/logowanie"} onClick={closeMenu}>
-              <div className="userStatus">
+              <div className="nav-item-user userStatus">
                 <span className="userStatusSpan">{status}</span>
                 <img src="/images/konto.png" alt="konto" />
               </div>

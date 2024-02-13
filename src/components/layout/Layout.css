@@ -51,8 +51,14 @@
 .nav-item-user {
   background: linear-gradient(45deg, #5c00f1, #00c5bb);
 }
-.nav-item:hover {
+.nav-item:hover,
+.nav-item-user:hover {
   scale: 1.05;
+}
+.nav-item:active,
+.nav-item-user:active{
+  filter:hue-rotate(90deg);
+  transition:ease-in-out 200ms;
 }
 .hamburger {
   display: none;

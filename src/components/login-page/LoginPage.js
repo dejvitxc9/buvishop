@@ -111,20 +111,36 @@ function Logowanie(props) {
       setWelcomeEditedDiv(<></>);
       setAnimationKey(animationKey + 1);
 
-      const letters = Array.from(props.showWelocomeScreen);
+      // const letters = Array.from(props.showWelocomeScreen);
 
       props.test("");
+
+      const letters = props.showWelocomeScreen
+        .split(" ")
+        .map((word) => word.split(""));
 
       if (true) {
         setWelcomeEditedDiv(
           <div id="welcomeDiv" key={animationKey}>
-            <h1 className="h1Welcome">
+            {letters.map((word, index) => (
+              <div className="testerowski">
+                <h1 className="h1Welcome">
+                  {word.map((letter, index) => (
+                    <span className="spanWelcome" key={index}>
+                      {letter}
+                    </span>
+                  ))}
+                </h1>
+              </div>
+            ))}
+
+            {/* <h1 className="h1Welcome">
               {letters.map((letter, index) => (
                 <span className="spanWelcome" key={index}>
                   {letter}
                 </span>
               ))}
-            </h1>
+            </h1> */}
           </div>
         );
       }
