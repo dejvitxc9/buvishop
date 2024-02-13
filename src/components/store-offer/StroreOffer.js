@@ -14,6 +14,6 @@ function Oferta(props) {
     );
   });
 
-  return <div className="ofertaobuwia row">{ofertaObuwia}</div>;
+  return <div className="ofertaobuwia row no-margin-no-padding">{ofertaObuwia}</div>;
 }
 export default Oferta;

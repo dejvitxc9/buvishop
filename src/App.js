@@ -369,34 +369,6 @@ function App() {
       " " +
       currentUser.lastName;
     setUserStatus(status);
-
-    if (currentUser.ranga == "Administrator") {
-      setMenu(
-        <li className="nav-item">
-          <Link to={"/dodawanie"}>
-            <p>Dodawanie do oferty</p>
-          </Link>
-        </li>
-      );
-    } else if (currentUser.ranga == "Klient") {
-      setMenu(
-        <>
-          <li className="nav-item">
-            <Link to={"/koszyk"}>
-              <p>Koszyk: {currentUser.koszykZakupow.length}</p>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to={"/kontakt"}>
-              <p>Kontakt</p>
-            </Link>
-          </li>
-        </>
-      );
-    } else {
-      setUserStatus("Błąd");
-      setMenu(<></>);
-    }
     updateUsersList();
   }
 
@@ -405,7 +377,6 @@ function App() {
     setCurrentUser();
     setUserStatus("");
     setWelcomeText("");
-    setMenu(<></>);
   }
 
   function updateUsersList() {
@@ -453,7 +424,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout status={userStatus} menu={menu} />}>
+        <Route path="/" element={<Layout status={userStatus} currentUser={currentUser}/>}>
           <Route
             index
             element={

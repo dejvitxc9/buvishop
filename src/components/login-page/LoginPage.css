@@ -78,9 +78,7 @@ input[type="text"] {
 }
 
 .btn-custom {
-  margin-top: 2rem;
   margin-right: 3rem;
-  float: right;
 }
 
 @media (max-width: 1000px) {

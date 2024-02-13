@@ -8,6 +8,10 @@
   scrollbar-color: #01c1b7 #2d2d2d;
 } */
 
+.no-margin-no-padding{
+  margin: 0px;
+  padding: 0px;
+}
 *::-webkit-scrollbar {
   width: 16px;
 }

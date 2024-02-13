@@ -34,7 +34,7 @@ function Logowanie(props) {
         "Kod dostępu np: wysłany na pocztę pracowniczą, lub SMS:\n" + accesCode
       );
       setPytanieVerify(
-        <>
+        <div className="form-group col-6">
           <label htmlFor="koddostepu">Kod dostępu</label>
           <input
             type="password"
@@ -46,7 +46,7 @@ function Logowanie(props) {
             min={1000}
             max={9999}
           ></input>
-        </>
+        </div>
       );
     } else {
       setPytanieVerify("");
@@ -134,8 +134,8 @@ function Logowanie(props) {
   return (
     <div className="logowaniePage">
       {welcomeEditedDiv}
-      <div className="logowanienastrone">
-        <h1>Zaloguj się do konta</h1>
+      <div className="logowanienastrone col-12 col-md-8 col-lg-5">
+        <h2>Zaloguj się do konta</h2>
         <form id="logowanie" name="logowanie" onSubmit={zaloguj}>
           <label htmlFor="login">Login</label>
           <input
@@ -159,16 +159,38 @@ function Logowanie(props) {
 
           <input type="submit" value={"Zaloguj"} className="btn btn-primary" />
         </form>
-        <h1>Nie masz konta? Zarejestruj się</h1>
+        <h2>Nie masz konta? Zarejestruj się</h2>
         <form
           id="rejestracja"
           name="rejestracja"
           onSubmit={zarejestruj}
           method="POST"
+          className="row"
         >
           {/* <input type="hidden" name="form-name" value="rejestracja" /> */}
-
-          <section className="partLog">
+          <div className="form-group col-6">
+            <label htmlFor="imie">Imie</label>
+            <input
+              type="text"
+              name="imie"
+              id="imie"
+              className="form-control"
+              placeholder="Imie użytkownika"
+              required
+            ></input>
+          </div>
+          <div className="form-group col-6">
+            <label htmlFor="nazwisko">Nazwisko</label>
+            <input
+              type="text"
+              name="nazwisko"
+              id="nazwisko"
+              className="form-control"
+              placeholder="Nazwisko użytkownika"
+              required
+            ></input>
+          </div>
+          <div className="form-group col-6">
             <label htmlFor="login">Login</label>
             <input
               type="text"
@@ -178,7 +200,8 @@ function Logowanie(props) {
               placeholder="adres@email.com"
               required
             ></input>
-
+          </div>
+          <div className="form-group col-6">
             <label htmlFor="pass">Hasło</label>
             <input
               type="password"
@@ -188,7 +211,8 @@ function Logowanie(props) {
               placeholder="********"
               required
             ></input>
-
+          </div>
+          <div className="form-group col-6">
             <label htmlFor="selectranga">Typ konta:</label>
             <br />
             <select
@@ -202,30 +226,9 @@ function Logowanie(props) {
               </option>
               <option value={"Administrator"}>Administrator</option>
             </select>
-          </section>
-          <section className="partLog">
-            <label htmlFor="imie">Imie</label>
-            <input
-              type="text"
-              name="imie"
-              id="imie"
-              className="form-control"
-              placeholder="Imie użytkownika"
-              required
-            ></input>
+          </div>
 
-            <label htmlFor="nazwisko">Nazwisko</label>
-            <input
-              type="text"
-              name="nazwisko"
-              id="nazwisko"
-              className="form-control"
-              placeholder="Nazwisko użytkownika"
-              required
-            ></input>
-
-            {pytanieOVerify}
-          </section>
+          {pytanieOVerify}
 
           <button type="submit" className="btn btn-success btn-custom">
             Zarejestruj
