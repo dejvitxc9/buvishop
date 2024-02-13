@@ -57,7 +57,7 @@ function AddShoe(props) {
 
   return (
     <div className="adding-shoe-container">
-      <h3>Dodaj buta nr: {shoeID}</h3>
+      <h3>Dodaj ofertę buta ID: {shoeID}</h3>
       <form id="shoeAddForm" name="shoeAddForm" onSubmit={addNewShoe}>
         <div className="grid-section">
           <div>

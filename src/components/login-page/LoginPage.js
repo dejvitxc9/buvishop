@@ -21,6 +21,8 @@ function Logowanie(props) {
   const zalogujJako = (autoLogin, autoPassword) => {
     document.logowanie.lologin.value = autoLogin;
     document.logowanie.lopass.value = autoPassword;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   };
 
   const [pytanieOVerify, setPytanieVerify] = useState("");

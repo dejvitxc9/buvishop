@@ -117,7 +117,7 @@ function App() {
     {
       id: 11,
       brand: "Nike",
-      model: "Blazer Mid '77 Vintage",
+      model: "Blazer Vintage",
       size: [39, 41, 42, 43],
       fabric: "skóra naturalna",
       price: 499.99,
@@ -207,7 +207,7 @@ function App() {
     {
       id: 21,
       brand: "Converse",
-      model: "Chuck Taylor All Star",
+      model: "Chuck Taylor Star",
       size: [36, 37, 38, 39, 40],
       fabric: "tkanina",
       price: 99.99,

@@ -6,8 +6,8 @@ function ButGuzikAdd(props) {
   }
 
   return (
-    <button className="rozmiar" onClick={add} >
-      {props.zamowienie[1]}
+    <button className="rozmiar" onClick={add}>
+      <h5 className="m-0">{props.zamowienie[1]}</h5>
     </button>
   );
 }

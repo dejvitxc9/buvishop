@@ -70,9 +70,9 @@ function KoszykItem(props) {
             onClick={deleteShoe}
           />
         </h3>
-        <h3 className="price">{Math.round((currentPrice) * 100) / 100}</h3>
+        <h3 className="cartPrice">{Math.round((currentPrice) * 100) / 100}</h3>
         <br></br>
-        <p className="price">cena za sztuke: {price}</p>
+        <p className="cartPrice">cena za sztuke: {price}</p>
       </div>
     </div>
   );

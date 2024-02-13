@@ -24,10 +24,10 @@
     float: left;
     width: 13rem;
 }
-.price{
+.cartPrice{
     float: right;
 }
-.price::after{
+.cartPrice::after{
     content: " PLN";
 }
 .modeltext{
