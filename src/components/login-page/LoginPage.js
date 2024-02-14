@@ -133,14 +133,6 @@ function Logowanie(props) {
                 </h1>
               </div>
             ))}
-
-            {/* <h1 className="h1Welcome">
-              {letters.map((letter, index) => (
-                <span className="spanWelcome" key={index}>
-                  {letter}
-                </span>
-              ))}
-            </h1> */}
           </div>
         );
       }
@@ -150,30 +142,44 @@ function Logowanie(props) {
   return (
     <div className="logowaniePage">
       {welcomeEditedDiv}
-      <div className="logowanienastrone col-12 col-md-8 col-lg-5">
+      <div className="logowanienastrone">
         <h2>Zaloguj się do konta</h2>
-        <form id="logowanie" name="logowanie" onSubmit={zaloguj}>
-          <label htmlFor="login">Login</label>
-          <input
-            type="text"
-            name="lologin"
-            id="lologin"
-            className="form-control"
-            placeholder="adres@email.com"
-            required
-          ></input>
+        <form
+          id="logowanie"
+          name="logowanie"
+          onSubmit={zaloguj}
+          className="container"
+        >
+          <div className="row">
+            <div className="form-group col-12">
+              <label htmlFor="login">Login</label>
+              <input
+                type="text"
+                name="lologin"
+                id="lologin"
+                className="form-control"
+                placeholder="adres@przyklad.pl"
+                required
+              ></input>
+            </div>
+            <div className="form-group col-12">
+              <label htmlFor="pass">Hasło</label>
+              <input
+                type="password"
+                name="lopass"
+                id="lopass"
+                className="form-control"
+                placeholder="********"
+                required
+              ></input>
+            </div>
+          </div>
 
-          <label htmlFor="pass">Hasło</label>
           <input
-            type="password"
-            name="lopass"
-            id="lopass"
-            className="form-control"
-            placeholder="********"
-            required
-          ></input>
-
-          <input type="submit" value={"Zaloguj"} className="btn btn-primary" />
+            type="submit"
+            value={"Zaloguj"}
+            className="btn btn-primary login-button"
+          />
         </form>
         <h2>Nie masz konta? Zarejestruj się</h2>
         <form
@@ -181,76 +187,81 @@ function Logowanie(props) {
           name="rejestracja"
           onSubmit={zarejestruj}
           method="POST"
-          className="row"
+          className="container"
         >
-          {/* <input type="hidden" name="form-name" value="rejestracja" /> */}
-          <div className="form-group col-6">
-            <label htmlFor="imie">Imie</label>
-            <input
-              type="text"
-              name="imie"
-              id="imie"
-              className="form-control"
-              placeholder="Imie użytkownika"
-              required
-            ></input>
-          </div>
-          <div className="form-group col-6">
-            <label htmlFor="nazwisko">Nazwisko</label>
-            <input
-              type="text"
-              name="nazwisko"
-              id="nazwisko"
-              className="form-control"
-              placeholder="Nazwisko użytkownika"
-              required
-            ></input>
-          </div>
-          <div className="form-group col-6">
-            <label htmlFor="login">Login</label>
-            <input
-              type="text"
-              name="login"
-              id="login"
-              className="form-control"
-              placeholder="adres@email.com"
-              required
-            ></input>
-          </div>
-          <div className="form-group col-6">
-            <label htmlFor="pass">Hasło</label>
-            <input
-              type="password"
-              name="pass"
-              id="pass"
-              className="form-control"
-              placeholder="********"
-              required
-            ></input>
-          </div>
-          <div className="form-group col-6">
-            <label htmlFor="selectranga">Typ konta:</label>
-            <br />
-            <select
-              id="selectranga"
-              name="selectranga"
-              className="form-select"
-              onChange={mozeVerify}
-            >
-              <option value={"Klient"} defaultChecked>
-                Klient
-              </option>
-              <option value={"Administrator"}>Administrator</option>
-            </select>
+          <div className="row">
+            {/* <input type="hidden" name="form-name" value="rejestracja" /> */}
+            <div className="form-group col-sm-12 col-md-6">
+              <label htmlFor="imie">Imie</label>
+              <input
+                type="text"
+                name="imie"
+                id="imie"
+                className="form-control"
+                placeholder="Imię"
+                required
+              ></input>
+            </div>
+            <div className="form-group col-sm-12 col-md-6">
+              <label htmlFor="nazwisko">Nazwisko</label>
+              <input
+                type="text"
+                name="nazwisko"
+                id="nazwisko"
+                className="form-control"
+                placeholder="Nazwisko"
+                required
+              ></input>
+            </div>
+            <div className="form-group col-sm-12 col-md-6">
+              <label htmlFor="login">Login</label>
+              <input
+                type="text"
+                name="login"
+                id="login"
+                className="form-control"
+                placeholder="adres@przyklad.pl"
+                required
+              ></input>
+            </div>
+            <div className="form-group col-sm-12 col-md-6">
+              <label htmlFor="pass">Hasło</label>
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                className="form-control"
+                placeholder="********"
+                required
+              ></input>
+            </div>
+            <div className="form-group col-sm-12 col-md-6">
+              <label htmlFor="selectranga">Typ konta:</label>
+              <br />
+              <select
+                id="selectranga"
+                name="selectranga"
+                className="form-select"
+                onChange={mozeVerify}
+              >
+                <option value={"Klient"} defaultChecked>
+                  Klient
+                </option>
+                <option value={"Administrator"}>Administrator</option>
+              </select>
+            </div>
           </div>
 
           {pytanieOVerify}
 
-          <button type="submit" className="btn btn-success btn-custom">
-            Zarejestruj
-          </button>
+          <input
+            type="submit"
+            value={"Zarejestruj"}
+            className="btn btn-success login-button"
+          />
         </form>
       </div>
+
       <div className="opcjeLogowania">
         <section className="przykladKonto" onClick={() => props.bypas()}>
           Wyloguj

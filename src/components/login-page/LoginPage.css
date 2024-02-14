@@ -3,7 +3,8 @@
 }
 
 .logowanienastrone {
-  height: 45rem;
+  min-width: 300px;
+  max-width: 900px;
   background: linear-gradient(45deg, #5c00f1, #00c5bb);
   margin: 2rem;
   padding: 2rem;
@@ -12,6 +13,7 @@
 
 .opcjeLogowania {
   height: 40rem;
+  min-width: 300px;
   background: linear-gradient(45deg, #5c00f1, #00c5bb);
   margin: 2rem;
   padding: 2rem;
@@ -77,15 +79,15 @@ input[type="text"] {
   margin-bottom: 1rem;
 }
 
-.btn-custom {
-  margin-right: 3rem;
-}
-
 @media (max-width: 1000px) {
   .logowaniePage {
     display: flex;
     flex-direction: column;
   }
+}
+
+.login-button{
+  float: right;
 }
 
 
@@ -125,12 +127,12 @@ input[type="text"] {
 }
 
 #welcomeDiv {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 100;
+  z-index: 101;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

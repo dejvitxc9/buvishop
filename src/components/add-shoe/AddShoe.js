@@ -105,7 +105,7 @@ function AddShoe(props) {
         <label>Rozmiar</label>
         {allSizesForm}
 
-        <input type="submit" value={"Dodaj"} className="btn btn-primary" />
+        <input type="submit" value={"Dodaj"} className="btn btn-primary custom-input" />
       </form>
     </div>
   );

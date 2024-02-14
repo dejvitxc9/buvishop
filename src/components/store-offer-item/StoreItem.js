@@ -19,7 +19,7 @@ function But(props) {
 
   const imgsrc = "/images/img (" + props.infoButa.id + ").png";
   return (
-    <div className="col-12 col-sm-6 col-lg-3"
+    <div className="col-12 col-sm-6 col-md-4 col-xl-3"
       key={props.infoButa.id.toString()}>
       <div className="ofertaButa">
         <div className="imgButaContainer">
