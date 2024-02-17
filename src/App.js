@@ -2,7 +2,7 @@ import "./bootstrap.css";
 import "./App.css";
 
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StoreOffer from "./components/store-offer/StroreOffer";
 import Layout from "./components/layout/Layout";
 import Main from "./components/main/Main";
@@ -311,7 +311,6 @@ function App() {
   const [users, addUser] = useState(usersStarter);
   const [currentUser, setCurrentUser] = useState();
   const [bazaDanychButy, setBazaDanychButy] = useState(shoesData);
-  const [menu, setMenu] = useState("");
   const [welcomeText, setWelcomeText] = useState("");
 
   function updateUsers(newUser) {
@@ -388,7 +387,6 @@ function App() {
           return currentUser;
         }
       });
-      console.log(propozycjaUsers);
       addUser(propozycjaUsers);
     }
   }
@@ -406,7 +404,6 @@ function App() {
   }
 
   function edycjaProduktuWKoszyku(newCartItemData) {
-    console.log(newCartItemData);
     const index = currentUser.koszykZakupow.findIndex((item) => {
       return (
         item[0] === newCartItemData.id &&
@@ -424,7 +421,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout status={userStatus} currentUser={currentUser}/>}>
+        <Route
+          path="/"
+          element={<Layout status={userStatus} currentUser={currentUser} />}
+        >
           <Route
             index
             element={

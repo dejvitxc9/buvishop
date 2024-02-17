@@ -11,8 +11,8 @@
     scale: 1.02;
 }
 
-.item > img{
-    width: 8rem;
+.img-shoe{
+    width: 100%;
     height: auto;
     float: left;
     border-radius: 1rem;

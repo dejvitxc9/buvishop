@@ -31,7 +31,7 @@ function KoszykItem(props) {
   }
 
   function update() {
-    props.onChange({...kompaktoweDanePrzedmiotu, newSelectedQuantity: x});
+    props.onChange({ ...kompaktoweDanePrzedmiotu, newSelectedQuantity: x });
   }
 
   function deleteShoe() {
@@ -40,39 +40,43 @@ function KoszykItem(props) {
 
   return (
     <div className="item" key={id}>
-      <img src={imgsrc} alt={brand}></img>
-      <div className="podzialka-m">
-        <h1>{model}</h1>
-        <h3>{brand}</h3>
-      </div>
-      <div className="podzialka-l">
-        <h4>Wybrany selectedSize: {selectedSize}</h4>
-        <h4>Materiał: {fabric}</h4>
-      </div>
-      <div className="podzialka-l">
-        <h3>
-          Ilość:
-          <div className="iloscZamowienia-container">
-            <input
-              type="number"
-              onChange={changeShoeData}
-              className="form-control"
-              id={quantityInputID}
-              defaultValue={selectedQuantity}
-              min={1}
-              max={props.shoeData.quantity}
-            ></input>
-          </div>
-          <img
-            className="usuwacz"
-            src="/images/delete.png"
-            alt="Usuń produkt"
-            onClick={deleteShoe}
-          />
-        </h3>
-        <h3 className="cartPrice">{Math.round((currentPrice) * 100) / 100}</h3>
-        <br></br>
-        <p className="cartPrice">cena za sztuke: {price}</p>
+      <div className="row">
+        <div className="col-12 col-md-3">
+          <img className="img-shoe" src={imgsrc} alt={brand}></img>
+        </div>
+        <div className="col-6 col-md-3">
+          <h1>{model}</h1>
+          <h3>{brand}</h3>
+        </div>
+        <div className="col-6 col-md-3">
+          <h4>Wybrany rozmiar: {selectedSize}</h4>
+          <h4>Materiał: {fabric}</h4>
+        </div>
+        <div className="col-6 col-md-3">
+          <h3>
+            Ilość:
+            <div className="iloscZamowienia-container">
+              <input
+                type="number"
+                onChange={changeShoeData}
+                className="form-control"
+                id={quantityInputID}
+                defaultValue={selectedQuantity}
+                min={1}
+                max={props.shoeData.quantity}
+              ></input>
+            </div>
+            <img
+              className="usuwacz"
+              src="/images/delete.png"
+              alt="Usuń produkt"
+              onClick={deleteShoe}
+            />
+          </h3>
+          <h3 className="cartPrice">{Math.round(currentPrice * 100) / 100}</h3>
+          <br></br>
+          <p className="cartPrice">cena za sztuke: {price}</p>
+        </div>
       </div>
     </div>
   );

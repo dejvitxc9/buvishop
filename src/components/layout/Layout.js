@@ -28,7 +28,9 @@ function Strona({ status, currentUser }) {
           <>
             <li>
               <Link to={"/koszyk"} onClick={closeMenu}>
-                <p className="nav-item">Koszyk: {currentUser.koszykZakupow.length}</p>
+                <p className="nav-item">
+                  Koszyk: {currentUser.koszykZakupow.length}
+                </p>
               </Link>
             </li>
             <li>
@@ -39,9 +41,10 @@ function Strona({ status, currentUser }) {
           </>
         );
       }
+    } else {
+      setMenu(<></>);
     }
   }, [currentUser]);
-  
 
   return (
     <div className="App">

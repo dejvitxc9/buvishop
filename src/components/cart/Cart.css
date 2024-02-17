@@ -7,7 +7,7 @@
     background: linear-gradient(60deg, #9900f1, #c57600);
     margin: 2rem;
     padding: 2rem;
-    border-radius: 3rem;
+    border-radius: 5rem;
     float: left;
 }
 
@@ -16,7 +16,7 @@
     background: linear-gradient(-60deg, #9900f1, #c57600);
     margin: 2rem;
     padding: 2rem;
-    border-radius: 3rem;
+    border-radius: 5rem;
     float: left;
 }
 

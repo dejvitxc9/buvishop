@@ -1,13 +1,14 @@
 import "./ButGuzikAdd.css";
 
-function ButGuzikAdd(props) {
+function ButGuzikAdd({ onAddButDoKoszyka, zamowienie}) {
   function add() {
-    props.onAddTreButDoKoszyka(props.zamowienie);
+    onAddButDoKoszyka(zamowienie);
+    // console.log(zamowienie);
   }
 
   return (
     <button className="rozmiar" onClick={add}>
-      <h5 className="m-0">{props.zamowienie[1]}</h5>
+      <h5 className="m-0">{zamowienie[1]}</h5>
     </button>
   );
 }

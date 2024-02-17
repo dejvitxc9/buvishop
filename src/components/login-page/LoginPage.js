@@ -154,7 +154,7 @@ function Logowanie(props) {
             <div className="form-group col-12">
               <label htmlFor="login">Login</label>
               <input
-                type="text"
+                type="email"
                 name="lologin"
                 id="lologin"
                 className="form-control"
@@ -216,7 +216,7 @@ function Logowanie(props) {
             <div className="form-group col-sm-12 col-md-6">
               <label htmlFor="login">Login</label>
               <input
-                type="text"
+                type="email"
                 name="login"
                 id="login"
                 className="form-control"

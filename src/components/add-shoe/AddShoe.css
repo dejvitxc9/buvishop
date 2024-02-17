@@ -1,23 +1,9 @@
 .adding-shoe-container {
-  width: 50rem;
-  height: 40rem;
   background: linear-gradient(60deg, #9900f1, #c57600);
   box-shadow: 5px 5px #57008a;
-  margin: 2rem;
   padding: 2rem;
-  border-radius: 3rem;
-}
-
-.grid-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.custom-input {
   margin-top: 2rem;
-  margin-right: 3rem;
-  float: right;
+  border-radius: 3rem;
 }
 
 input[type="text"],

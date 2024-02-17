@@ -26,7 +26,6 @@ function AddShoe(props) {
 
     props.onAddShoe(newShoe);
 
-
     document.shoeAddForm.brand.value = "";
     document.shoeAddForm.model.value = "";
     document.shoeAddForm.fabric.value = "";
@@ -56,56 +55,65 @@ function AddShoe(props) {
   });
 
   return (
-    <div className="adding-shoe-container">
+    <div className="adding-shoe-container col-sm-12 col-md-8 col-lg-6 m-2">
       <h3>Dodaj ofertę buta ID: {shoeID}</h3>
-      <form id="shoeAddForm" name="shoeAddForm" onSubmit={addNewShoe}>
-        <div className="grid-section">
-          <div>
-            <label htmlFor="brand">Producent</label>
-            <input
-              type="text"
-              name="brand"
-              id="brand"
-              className="form-control"
-              placeholder="Producent"
-              required
-            ></input>
-          </div>
-          <div>
-            <label htmlFor="model">Model</label>
-            <input
-              type="text"
-              name="model"
-              id="model"
-              className="form-control"
-              placeholder="Model"
-              required
-            ></input>
-          </div>
+      <form id="shoeAddForm" name="shoeAddForm container" onSubmit={addNewShoe}>
+        <div className="form-group">
+          <label htmlFor="brand">Producent</label>
+          <input
+            type="text"
+            name="brand"
+            id="brand"
+            className="form-control"
+            placeholder="Producent"
+            required
+          ></input>
         </div>
-        <label htmlFor="fabric">Materiał</label>
-        <input
-          type="text"
-          name="fabric"
-          id="fabric"
-          className="form-control"
-          placeholder="Materiał"
-          required
-        ></input>
-        <label htmlFor="price">Cena</label>
-        <input
-          type="text"
-          name="price"
-          id="price"
-          className="form-control"
-          placeholder="Cena"
-          pattern="[0-9]+([.,][0-9]+)?"
-          required
-        ></input>
-        <label>Rozmiar</label>
-        {allSizesForm}
-
-        <input type="submit" value={"Dodaj"} className="btn btn-primary custom-input" />
+        <div className="form-group">
+          <label htmlFor="model">Model</label>
+          <input
+            type="text"
+            name="model"
+            id="model"
+            className="form-control"
+            placeholder="Model"
+            required
+          ></input>
+        </div>
+        <div className="form-group">
+          <label htmlFor="fabric">Materiał</label>
+          <input
+            type="text"
+            name="fabric"
+            id="fabric"
+            className="form-control"
+            placeholder="Materiał"
+            required
+          ></input>
+        </div>
+        <div className="form-group">
+          <label htmlFor="price">Cena</label>
+          <input
+            type="text"
+            name="price"
+            id="price"
+            className="form-control"
+            placeholder="Cena"
+            pattern="[0-9]+([.,][0-9]+)?"
+            required
+          ></input>
+        </div>
+        <div className="form-group">
+          <label>Rozmiar</label>
+          {allSizesForm}
+        </div>
+        <div className="form-group">
+          <input
+            type="submit"
+            value={"Dodaj"}
+            className="btn btn-primary"
+          />
+        </div>
       </form>
     </div>
   );

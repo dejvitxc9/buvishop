@@ -8,7 +8,7 @@ function Contact() {
       <h3>Telefon: +48 793 070 996</h3>
       <h3>E-mail: dawid.uniowski@gmail.com</h3>
       <h4>Znajdź nas: </h4>
-      <div class="col-12 ">{<GMap />}</div>
+      <div className="col-12">{<GMap />}</div>
     </div>
   );
 }
