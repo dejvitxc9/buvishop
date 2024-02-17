@@ -123,10 +123,10 @@ function Logowanie(props) {
         setWelcomeEditedDiv(
           <div id="welcomeDiv" key={animationKey}>
             {letters.map((word, index) => (
-              <div className="testerowski">
+              <div className="testerowski" key={index}>
                 <h1 className="h1Welcome">
-                  {word.map((letter, index) => (
-                    <span className="spanWelcome" key={index}>
+                  {word.map((letter, indexd) => (
+                    <span className="spanWelcome" key={indexd}>
                       {letter}
                     </span>
                   ))}
