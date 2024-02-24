@@ -1,5 +1,6 @@
-import "./bootstrap.css";
+// import "./bootstrap.css";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
