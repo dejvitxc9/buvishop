@@ -1,0 +1,7 @@
+.main-container{
+    background: linear-gradient(45deg, #30f100, #c57600);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    float: left;
+}

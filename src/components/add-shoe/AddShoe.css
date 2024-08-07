@@ -1,0 +1,18 @@
+.adding-shoe-container {
+  background: linear-gradient(60deg, #9900f1, #c57600);
+  box-shadow: 5px 5px #57008a;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 3rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  margin-bottom: 1rem;
+}
+
+.possible-size {
+  display: inline;
+  margin-left: 2rem;
+  font-size: large;
+}

@@ -1,0 +1,70 @@
+.logowaniePage {
+  display: flex;
+}
+
+.logowanienastrone {
+  min-width: 300px;
+  max-width: 900px;
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.opcjeLogowania {
+  min-width: 300px;
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.loginAsButton>h1 {
+  margin-bottom: 2rem;
+}
+
+.loginAsButton {
+  text-align: center;
+  background-color: #3d3d3d;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
+  height: 3rem;
+  line-height: 3rem;
+  cursor: pointer;
+}
+
+.loginAsButton>section:hover {
+  background-color: #3d3d3d;
+  scale: 1.05;
+}
+
+.partLog {
+  width: 50%;
+  float: left;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="email"],
+select {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .logowaniePage {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.confirm-icon {
+  width: 10rem;
+  margin: auto;
+}
+.confirm-msg{
+  margin-top: 3rem;
+}

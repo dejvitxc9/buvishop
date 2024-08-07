@@ -1,0 +1,104 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  transition: 0.3s ease-in-out;
+}
+/* * {
+  scrollbar-width: auto;
+  scrollbar-color: #01c1b7 #2d2d2d;
+} */
+
+.no-margin-no-padding{
+  margin: 0px;
+  padding: 0px;
+}
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #01c1b7;
+  border-radius: 10px;
+  border: 3px solid #2d2d2d;
+}
+
+:root {
+  background-color: #2d2d2d;
+}
+
+.login-button{
+  float: right;
+}
+
+
+.h1Welcome {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.spanWelcome {
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  opacity: 0;
+  padding: 0.3rem;
+  transform: translateY(20px) rotate(90deg);
+  transform-origin: left;
+  animation: in 2s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes in {
+  0% {
+      opacity: 0;
+      transform: translateY(50px) rotate(90deg);
+  }
+
+  25%, 99% {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#welcomeDiv {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content:center;
+  justify-content: center;
+  background: linear-gradient(45deg, #5c00f1, #00c5bb);
+  animation: welcomeGone 2s forwards;
+}
+.testerowski{
+  margin: 0 1rem;
+  display: block;
+}
+
+@keyframes welcomeGone {
+
+  0%,
+  90% {
+      opacity: 1;
+      height: 100vh;
+  }
+
+  100% {
+      visibility: hidden;
+      height: 0px;
+  }
+}
+

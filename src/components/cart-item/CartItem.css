@@ -1,0 +1,53 @@
+.item{
+    width: 100%;
+    background: linear-gradient(-50deg, #00d5f1, #00f1a1);
+    padding: 2rem;
+    border-radius: 4rem;
+    float: left;
+    margin-bottom: 2rem;
+}
+
+.item:hover{
+    scale: 1.02;
+}
+
+.img-shoe{
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    float: left;
+    border-radius: 2rem;
+    z-index: 0;
+}
+
+.podzialka-m{
+    margin-left: 2rem;
+    float: left;
+    width: 13rem;
+}
+.cartPrice{
+    float: right;
+}
+.cartPrice::after{
+    content: " PLN";
+}
+.modeltext{
+    font-size: 2rem;
+}
+.iloscZamowienia-container{
+    margin-left: 2rem;
+    width: 4rem;
+    display: inline-flex;
+}
+.podzialka-l{
+    margin-left: 2rem;
+    float: left;
+    width: 17rem;
+}
+.usuwacz{
+    margin-left: 3rem;
+}
+.usuwacz:hover{
+    background-color: #b6b6b6;
+    border-radius: 1rem;
+}
